@@ -1,0 +1,27 @@
+# .bashrc
+PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+
+# reverse search minding already entered letters
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+
+PATH=$PATH:/home/joi/.gem/ruby/1.9.1/bin
+PATH=$PATH:/home/joi/.vim/lib/vimclojure-nailgun-client
+PATH=$PATH:/home/joi/.gem/ruby/2.0.0/bin
+PATH=$PATH:/home/joi/bin 
+export PATH
+
+HISTSIZE=1000000
+export HISTSIZE
+
+# aliases
+alias ls="ls --color"
+alias tmux="tmux -2"
